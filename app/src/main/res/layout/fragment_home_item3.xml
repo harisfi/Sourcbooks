@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.home.item3.HomeItem3Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_gravity="start"
+            android:src="@drawable/sample_book"
+            android:layout_weight="0.5"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_gravity="end"
+            android:src="@drawable/sample_book"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+</LinearLayout>
