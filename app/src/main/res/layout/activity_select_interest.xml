@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Select your favourite book's subjects"
+            android:text="@string/select_your_"
             android:textColor="@color/black"
             android:textSize="36sp"
             android:textStyle="bold"
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="select up to four subjects"
+            android:text="@string/select_up_"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txTitle" />
 
@@ -47,114 +47,115 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Art" />
+                android:text="@string/art" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipSciFi"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Science Fiction" />
+                android:text="@string/science_fiction" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipFantasy"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fantasy" />
+                android:text="@string/fantasy" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipBio"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Biographies" />
+                android:text="@string/biographies" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipRecipes"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recipes" />
+                android:text="@string/recipes" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipRomance"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Romance" />
+                android:text="@string/romance" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipTextbooks"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Textbooks" />
+                android:text="@string/textbooks" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipChildren"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Children" />
+                android:text="@string/children" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipHistory"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="History" />
+                android:text="@string/history" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMedicine"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Medicine" />
+                android:text="@string/medicine" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipReligion"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Religion" />
+                android:text="@string/religion" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMystery"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mystery and Detective Stories" />
+                android:text="@string/mystery" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipPlays"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Plays" />
+                android:text="@string/plays" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipMusic"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Music" />
+                android:text="@string/music" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipScience"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Science" />
+                android:text="@string/science" />
         </com.google.android.material.chip.ChipGroup>
         <Button
             android:id="@+id/btnContinue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Continue"
+            android:layout_marginVertical="16dp"
+            android:text="@string/continue_"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
