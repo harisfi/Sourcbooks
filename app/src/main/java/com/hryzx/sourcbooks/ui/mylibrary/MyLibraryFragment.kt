@@ -1,5 +1,6 @@
 package com.hryzx.sourcbooks.ui.mylibrary
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,6 +12,7 @@ import com.hryzx.sourcbooks.R
 import com.hryzx.sourcbooks.adapter.RecyclerViewGridAdapter
 import com.hryzx.sourcbooks.databinding.FragmentMyLibraryBinding
 import com.hryzx.sourcbooks.models.Book
+import com.hryzx.sourcbooks.ui.BookDetailActivity
 
 class MyLibraryFragment : Fragment() {
 
@@ -21,12 +23,12 @@ class MyLibraryFragment : Fragment() {
     private lateinit var viewModel: MyLibraryViewModel*/
 
     private var _binding: FragmentMyLibraryBinding? = null
-    private val binidng get() = _binding!!
+    private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 //        return inflater.inflate(R.layout.fragment_my_library, container, false)
         _binding = FragmentMyLibraryBinding.inflate(inflater, container, false)
-        return binidng.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -43,9 +45,17 @@ class MyLibraryFragment : Fragment() {
             list.add(book)
         }
 
-        binidng.rvMyLib.layoutManager = GridLayoutManager(view.context, 2)
+        binding.rvMyLib.layoutManager = GridLayoutManager(view.context, 2)
         val recyclerViewGridAdapter = RecyclerViewGridAdapter(list)
-        binidng.rvMyLib.adapter = recyclerViewGridAdapter
+        binding.rvMyLib.adapter = recyclerViewGridAdapter
+
+        recyclerViewGridAdapter.setOnItemClickCallback(object : RecyclerViewGridAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Book) {
+                val intent = Intent(activity, BookDetailActivity::class.java)
+                intent.putExtra(BookDetailActivity.EXTRA_BOOK, data)
+                startActivity(intent)
+            }
+        })
     }
 
 }
