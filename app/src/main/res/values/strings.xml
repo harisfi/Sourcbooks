@@ -3,4 +3,47 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="by_">by %1$s</string>
+    <string name="page_">%1$d pages</string>
+    <string name="select_your_">Select your favourite book\'s subjects</string>
+    <string name="select_up_">select up to four subjects</string>
+    <string name="art">Art</string>
+    <string name="science_fiction">Science Fiction</string>
+    <string name="fantasy">Fantasy</string>
+    <string name="biographies">Biographies</string>
+    <string name="recipes">Recipes</string>
+    <string name="romance">Romance</string>
+    <string name="textbooks">Textbooks</string>
+    <string name="children">Children</string>
+    <string name="history">History</string>
+    <string name="medicine">Medicine</string>
+    <string name="religion">Religion</string>
+    <string name="mystery">Mystery and Detective Stories</string>
+    <string name="plays">Plays</string>
+    <string name="music">Music</string>
+    <string name="science">Science</string>
+    <string name="continue_">Continue</string>
+    <string name="background">background</string>
+    <string name="cover">cover</string>
+    <string name="discover">Discover</string>
+    <string name="search_and_">search and find your book</string>
+    <string name="icon">icon</string>
+    <string name="you_might_">You might like</string>
+    <string name="type_something_">Type something to search...</string>
+    <string name="bookmark">bookmark</string>
+    <string name="numpg">num page</string>
+    <string name="clear_all">Clear all</string>
+    <string name="search">Search</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="my_library">My Library</string>
+    <string name="save">Save to my library</string>
+    <string name="revision">Revision</string>
+    <string name="published">Published</string>
+    <string name="number_of_pages">Number of Pages</string>
+    <string name="remove">Remove from my library</string>
+    <string-array name="search_entries">
+        <item>Title</item>
+        <item>Author</item>
+        <item>In text</item>
+    </string-array>
 </resources>
