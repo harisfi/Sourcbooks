@@ -11,7 +11,7 @@
         android:id="@+id/txDiscover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discover"
+        android:text="@string/discover"
         android:textSize="36sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -24,7 +24,7 @@
         android:id="@+id/txHomeDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="search and find your book"
+        android:text="@string/search_and_"
         android:textSize="18sp"
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/sourcbooks_black"
-            android:layout_weight="0.4"/>
+            android:layout_weight="0.4"
+            android:contentDescription="@string/icon" />
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
@@ -63,7 +64,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txHomeDesc" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scrollhome"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scrollbars="vertical"
@@ -87,7 +89,7 @@
                 android:id="@+id/txRecommendation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="You might like"
+                android:text="@string/you_might_"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginVertical="8dp"
@@ -99,11 +101,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:scrollbars="vertical"
+                android:nestedScrollingEnabled="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txRecommendation"
                 tools:listitem="@layout/item_book_list" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
