@@ -1,5 +1,6 @@
 package com.hryzx.sourcbooks.ui.search
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.hryzx.sourcbooks.R
 import com.hryzx.sourcbooks.adapter.RecyclerViewListAdapter
 import com.hryzx.sourcbooks.databinding.FragmentSearchBinding
 import com.hryzx.sourcbooks.models.Book
+import com.hryzx.sourcbooks.ui.BookDetailActivity
 
 class SearchFragment : Fragment() {
 //    private lateinit var searchViewModel: SearchViewModel
@@ -44,8 +46,16 @@ class SearchFragment : Fragment() {
             list.add(book)
         }
 
-        binding.rvSearchBooks.layoutManager = LinearLayoutManager(view.context)
+        /*binding.rvSearchBooks.layoutManager = LinearLayoutManager(view.context)
         val mainRecyclerViewAdapter = RecyclerViewListAdapter(list)
         binding.rvSearchBooks.adapter = mainRecyclerViewAdapter
+
+        mainRecyclerViewAdapter.setOnItemClickCallback(object : RecyclerViewListAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Book) {
+                val intent = Intent(activity, BookDetailActivity::class.java)
+                intent.putExtra(BookDetailActivity.EXTRA_BOOK, data)
+                startActivity(intent)
+            }
+        })*/
     }
 }

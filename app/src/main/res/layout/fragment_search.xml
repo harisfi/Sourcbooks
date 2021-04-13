@@ -5,53 +5,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".ui.search.SearchFragment">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txInputLayoutSearch"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp"
         android:paddingVertical="16dp"
         android:paddingHorizontal="8dp"
-        android:background="@color/white"
-        android:hint="Type something to search..."
+        android:background="@drawable/border_whitebg"
+        android:hint="@string/type_something_"
         android:maxLines="1"
-        android:elevation="1dp"
         android:drawableEnd="@drawable/ic_search_24"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <RadioGroup
-        android:id="@+id/searchRadioGroup"
+    <LinearLayout
+        android:id="@+id/linear_spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/border_whitebg"
+        android:padding="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txInputLayoutSearch">
-        <RadioButton
-            android:layout_width="wrap_content"
+        <Spinner
+            android:id="@+id/search_spinner"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Author"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Subject"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Text"/>
-    </RadioGroup>
+            android:entries="@array/search_entries"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="14dp" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSearchBooks"
@@ -61,7 +52,7 @@
         android:scrollbars="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/searchRadioGroup"
+        app:layout_constraintTop_toBottomOf="@id/linear_spinner"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_book_list"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
