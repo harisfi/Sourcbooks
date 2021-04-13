@@ -1,5 +1,6 @@
 package com.hryzx.sourcbooks.ui.bookmarks
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.hryzx.sourcbooks.R
 import com.hryzx.sourcbooks.adapter.RecyclerViewGridAdapter
 import com.hryzx.sourcbooks.databinding.FragmentBookmarksBinding
 import com.hryzx.sourcbooks.models.Book
+import com.hryzx.sourcbooks.ui.BookDetailActivity
 
 class BookmarksFragment : Fragment() {
 //    private lateinit var bookmarksViewModel: BookmarksViewModel
@@ -47,5 +49,12 @@ class BookmarksFragment : Fragment() {
         val recyclerViewGridAdapter = RecyclerViewGridAdapter(list)
         binding.rvBookmarks.adapter = recyclerViewGridAdapter
 
+        recyclerViewGridAdapter.setOnItemClickCallback(object : RecyclerViewGridAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Book) {
+                val intent = Intent(activity, BookDetailActivity::class.java)
+                intent.putExtra(BookDetailActivity.EXTRA_BOOK, data)
+                startActivity(intent)
+            }
+        })
     }
 }
