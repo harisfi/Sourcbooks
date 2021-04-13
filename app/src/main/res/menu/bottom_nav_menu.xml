@@ -9,16 +9,16 @@
     <item
         android:id="@+id/navigation_search"
         android:icon="@drawable/ic_search_24"
-        android:title="Search" />
+        android:title="@string/search" />
 
     <item
         android:id="@+id/navigation_bookmarks"
         android:icon="@drawable/ic_bookmark_24"
-        android:title="Bookmarks" />
+        android:title="@string/bookmarks" />
 
     <item
         android:id="@+id/navigation_mylibrary"
         android:icon="@drawable/ic_book_24"
-        android:title="My Library" />
+        android:title="@string/my_library" />
 
 </menu>
