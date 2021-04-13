@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="0dp"
+        android:drawable="@color/placeholder"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+
+    <item
+        android:bottom="200dp"
+        android:drawable="@drawable/sourcbooks_black"
+        android:left="150dp"
+        android:right="150dp"
+        android:top="200dp" />
+</layer-list>
